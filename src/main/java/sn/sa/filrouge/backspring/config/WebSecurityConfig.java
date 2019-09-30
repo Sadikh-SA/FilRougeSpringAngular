@@ -14,7 +14,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
-import sn.sa.devweb.initiation.services.UserDetailsServiceImpl;
+import sn.sa.filrouge.backspring.services.UserDetailsServiceImpl;
 
 @Configuration
 @EnableWebSecurity

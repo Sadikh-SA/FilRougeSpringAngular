@@ -1,12 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="03f1441e-8419-4137-9399-e29bd67b85d8" name="Default Changelist" comment="" />
+    <list default="true" id="03f1441e-8419-4137-9399-e29bd67b85d8" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sn/sa/filrouge/backspring/BackspringApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sn/sa/filrouge/backspring/BackspringApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sn/sa/filrouge/backspring/config/JwtRequestFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sn/sa/filrouge/backspring/config/JwtRequestFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sn/sa/filrouge/backspring/config/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sn/sa/filrouge/backspring/config/WebSecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sn/sa/filrouge/backspring/model/RoleName.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sn/sa/filrouge/backspring/model/RoleName.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sn/sa/filrouge/backspring/services/UserDetailsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sn/sa/filrouge/backspring/services/UserDetailsServiceImpl.java" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
@@ -16,7 +26,12 @@
     </option>
   </component>
   <component name="ProjectId" id="1RY3qyqY73rfD8CPhvt3gIgFU8r" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/sn/sa/filrouge/backspring/contoller" />
@@ -60,11 +75,22 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1569830397039</updated>
-      <workItem from="1569830401927" duration="741000" />
+      <workItem from="1569830401927" duration="3323000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
