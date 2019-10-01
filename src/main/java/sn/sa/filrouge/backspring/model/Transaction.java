@@ -3,6 +3,7 @@ package sn.sa.filrouge.backspring.model;
 import lombok.Data;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 import java.util.Date;
 
@@ -58,6 +59,51 @@ public class Transaction {
     @Column()
     @Size(min = 9, max = 10)
     private double numeroTransaction;
+
+    @NotBlank
+    @JoinColumn(name = "id_commission", referencedColumnName = "id")
+    @ManyToOne(optional = false)
+    private Commission CommissionTTC;
+
+    @NotBlank
+    @JoinColumn(name = "id_user", referencedColumnName = "id")
+    @ManyToOne(optional = false)
+    private User utilisateur;
+
+    @NotBlank
+    @JoinColumn(name = "id_users", referencedColumnName = "id")
+    @ManyToOne(optional = false)
+    private User userRetrait;
+
+    public Transaction() {
+    }
+
+    public Transaction(String nomEnvoyeur, String prenomEnvoyeur, String adresseEnvoyeur, String telEnvoyeur, @Size(min = 9, max = 10) double CNIEnvoyeur, String nomBeneficiaire, String prenomBeneficiaire, String adresseBeneficiaire, String telBeneficiaire, @Size(min = 9, max = 10) double CNIBeneficiaire, double montantEnvoyer, double totalEnvoyer, double montantRetirer, Date dateEnvoie, Date dateRetrait, double commissionEnvoi, double commissionEtat, double commissionWari, double commissionRetrait, boolean type, @Size(min = 9, max = 10) double numeroTransaction, @NotBlank Commission commissionTTC, @NotBlank User utilisateur, @NotBlank User userRetrait) {
+        this.nomEnvoyeur = nomEnvoyeur;
+        this.prenomEnvoyeur = prenomEnvoyeur;
+        this.adresseEnvoyeur = adresseEnvoyeur;
+        this.telEnvoyeur = telEnvoyeur;
+        this.CNIEnvoyeur = CNIEnvoyeur;
+        this.nomBeneficiaire = nomBeneficiaire;
+        this.prenomBeneficiaire = prenomBeneficiaire;
+        this.adresseBeneficiaire = adresseBeneficiaire;
+        this.telBeneficiaire = telBeneficiaire;
+        this.CNIBeneficiaire = CNIBeneficiaire;
+        this.montantEnvoyer = montantEnvoyer;
+        this.totalEnvoyer = totalEnvoyer;
+        this.montantRetirer = montantRetirer;
+        this.dateEnvoie = dateEnvoie;
+        this.dateRetrait = dateRetrait;
+        this.commissionEnvoi = commissionEnvoi;
+        this.commissionEtat = commissionEtat;
+        this.commissionWari = commissionWari;
+        this.commissionRetrait = commissionRetrait;
+        this.type = type;
+        this.numeroTransaction = numeroTransaction;
+        CommissionTTC = commissionTTC;
+        this.utilisateur = utilisateur;
+        this.userRetrait = userRetrait;
+    }
 
     public int getId() {
         return id;

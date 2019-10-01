@@ -18,6 +18,15 @@ public class Commission {
     @Column()
     private double valeur;
 
+    public Commission() {
+    }
+
+    public Commission(double borneInferieure, double borneSuperieure, double valeur) {
+        this.borneInferieure = borneInferieure;
+        this.borneSuperieure = borneSuperieure;
+        this.valeur = valeur;
+    }
+
     public int getId() {
         return id;
     }
@@ -49,4 +58,6 @@ public class Commission {
     public void setValeur(double valeur) {
         this.valeur = valeur;
     }
+
+
 }

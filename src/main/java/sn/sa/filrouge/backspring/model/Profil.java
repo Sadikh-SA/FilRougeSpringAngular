@@ -16,6 +16,12 @@ public class Profil {
     @Column(length = 100, unique = true)
     private String libelle;
 
+    public Profil(String libelle) {
+        this.libelle = libelle;
+    }
+
+    public Profil(){}
+
     public int getId() {
         return id;
     }
