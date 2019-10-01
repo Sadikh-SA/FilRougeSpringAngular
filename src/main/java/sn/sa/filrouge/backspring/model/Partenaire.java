@@ -8,7 +8,7 @@ import java.util.Date;
 
 @Entity
 @Data
-@Table(name = "partenaires", uniqueConstraints = @UniqueConstraint(columnNames = {"ninea"}))
+@Table(name = "Partenaire", uniqueConstraints = @UniqueConstraint(columnNames = {"ninea"}))
 public class Partenaire {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

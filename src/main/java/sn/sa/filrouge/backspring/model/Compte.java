@@ -9,7 +9,7 @@ import java.util.Date;
 
 @Entity
 @Data
-@Table(name = "comptes", uniqueConstraints = @UniqueConstraint(columnNames = {"numeroCompte"}))
+@Table(name = "Compte", uniqueConstraints = @UniqueConstraint(columnNames = {"numeroCompte"}))
 public class Compte {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
