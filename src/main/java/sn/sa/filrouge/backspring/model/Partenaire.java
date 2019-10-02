@@ -22,10 +22,8 @@ public class Partenaire {
     @NotBlank
     @Column(length = 75)
     private String domaineActivite;
-    @NotBlank
     @Column(length = 75)
     private Date dateCreation;
-    @NotBlank
     @Column()
     private boolean statut;
 

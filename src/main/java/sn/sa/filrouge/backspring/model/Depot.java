@@ -13,19 +13,31 @@ public class Depot {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    @NotBlank
     @Column()
     private Date dateDepot;
-    @NotBlank
     @Column()
     private double montantDepot;
 
-    @NotBlank
     @JoinColumn(name = "id_compte", referencedColumnName = "id")
     @ManyToOne(optional = false)
     private Compte compte;
 
-    @NotBlank
+    public Compte getCompte() {
+        return compte;
+    }
+
+    public void setCompte(Compte compte) {
+        this.compte = compte;
+    }
+
+    public User getCaissier() {
+        return caissier;
+    }
+
+    public void setCaissier(User caissier) {
+        this.caissier = caissier;
+    }
+
     @JoinColumn(name = "id_caissier", referencedColumnName = "id")
     @ManyToOne(optional = false)
     private User caissier;
@@ -33,7 +45,7 @@ public class Depot {
     public Depot() {
     }
 
-    public Depot(@NotBlank Date dateDepot, @NotBlank double montantDepot, @NotBlank Compte compte, @NotBlank User caissier) {
+    public Depot(Date dateDepot, double montantDepot, Compte compte, User caissier) {
         this.dateDepot = dateDepot;
         this.montantDepot = montantDepot;
         this.compte = compte;

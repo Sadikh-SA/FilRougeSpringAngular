@@ -9,5 +9,7 @@ import java.util.Optional;
 
 @Repository
 public interface CompteRepository extends JpaRepository<Compte, Integer> {
+    Optional<Compte> findCompteByNumeroCompte(double numeroCompte);
+    Optional<Compte> findCompteById(int id);
 
 }

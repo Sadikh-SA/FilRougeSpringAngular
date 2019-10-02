@@ -22,7 +22,7 @@ public class ProfilCommisionController {
     private CommissionRepository commissionRepository;
 
     @GetMapping(value = "/liste/profil")
-    @PreAuthorize("hasAuthority('ROLE_ADMIN')")
+    @PreAuthorize("hasAuthority('ROLE_Wari')")
     public List<Profil> listerService(){
         return profilRepository.findAll();
     }

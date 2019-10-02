@@ -12,6 +12,8 @@ import sn.sa.filrouge.backspring.repository.UserRepository;
 @Service
 public class UserDetailsServiceImpl implements UserDetailsService {
 
+    private User userConnect;
+
     @Autowired
     UserRepository userRepository;
 
@@ -21,7 +23,11 @@ public class UserDetailsServiceImpl implements UserDetailsService {
 
         User user = userRepository.findByUsername(username).orElseThrow(
                 () -> new UsernameNotFoundException("User Not Found with -> username or email : " + username));
-
+                this.userConnect = user;
         return UserPrinciple.build(user);
+    }
+
+    public User getUserConnect() {
+        return userConnect;
     }
 }

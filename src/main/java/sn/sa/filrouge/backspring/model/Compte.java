@@ -14,25 +14,29 @@ public class Compte {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    @NotBlank
     @Column(unique = true)
     private double numeroCompte;
-    @NotBlank
     @Column(unique = true)
-    @Size(min = 6, max = 6, message = "Le code banque est un nombre de 6 caratères")
     private double codeBank;
     @NotBlank
     @Column(length = 75)
     private String nomBeneficiaire;
-    @NotBlank
     @Column()
     private double solde;
     @Column()
     private Date dateCreation;
-    @NotBlank
+
     @JoinColumn(name = "id_partenaire", referencedColumnName = "id")
     @ManyToOne(optional = false)
     private Partenaire partenaire;
+
+    public Partenaire getPartenaire() {
+        return partenaire;
+    }
+
+    public void setPartenaire(Partenaire partenaire) {
+        this.partenaire = partenaire;
+    }
 
     public Compte() {
     }
