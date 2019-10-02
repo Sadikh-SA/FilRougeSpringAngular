@@ -75,38 +75,6 @@ public class UserPartenaireCompte {
             inverseJoinColumns = @JoinColumn(name = "role_id"))
     private Set<Role> roles = new HashSet<>();
 
-    public User() {}
-
-    public User(@NotBlank @Size(min = 3, max = 50) String name, @NotBlank @Size(min = 3, max = 50) String prenom, @NotBlank @Size(min = 3, max = 50) String adresse, @NotBlank @Size(min = 7, max = 20) String tel, @NotBlank @Size(min = 3, max = 50) boolean statut, @NotBlank @Size(min = 3, max = 50) String profil, @NotBlank @Size(min = 3, max = 50) Date dateCreation, @Size(min = 3, max = 50) String imageName, @NotBlank Partenaire partenaire, Compte compte, @NotBlank @Size(min = 3, max = 50) String username, @NotBlank @Size(max = 50) @Email String email, @NotBlank @Size(min = 6, max = 100) String password, Set<Role> roles) {
-        this.name = name;
-        this.prenom = prenom;
-        this.adresse = adresse;
-        this.tel = tel;
-        this.statut = statut;
-        this.profil = profil;
-        this.dateCreation = dateCreation;
-        this.imageName = imageName;
-        this.partenaire = partenaire;
-        this.compte = compte;
-        this.username = username;
-        this.email = email;
-        this.password = password;
-        this.roles = roles;
-    }
-
-    public User(String name, String username, String email, String password, String adresse, String prenom, String tel, String imageName, boolean statut, Partenaire partenaire, Compte compte) {
-        this.name = name;
-        this.username = username;
-        this.email = email;
-        this.password = password;
-        this.prenom = prenom;
-        this.adresse = adresse;
-        this.tel = tel;
-        this.imageName = imageName;
-        this.statut = statut;
-        this.partenaire = partenaire;
-        this.compte = compte;
-    }
 
     public Long getId() {
         return id;
@@ -226,4 +194,90 @@ public class UserPartenaireCompte {
     public void setCompte(Compte compte) {
         this.compte = compte;
     }
+
+
+    /**
+     * Parti partenaire
+     */
+
+    @NotBlank
+    @Column(length = 100, unique = true)
+    private String ninea;
+    @NotBlank
+    @Column(length = 75)
+    private String localisation;
+    @NotBlank
+    @Column(length = 75)
+    private String domaineActivite;
+
+    public String getNinea() {
+        return ninea;
+    }
+
+    public void setNinea(String ninea) {
+        this.ninea = ninea;
+    }
+
+    public String getLocalisation() {
+        return localisation;
+    }
+
+    public void setLocalisation(String localisation) {
+        this.localisation = localisation;
+    }
+
+    public String getDomaineActivite() {
+        return domaineActivite;
+    }
+
+    public void setDomaineActivite(String domaineActivite) {
+        this.domaineActivite = domaineActivite;
+    }
+
+    /**
+     * Parti Compte
+     */
+
+    @Column(unique = true)
+    private double numeroCompte;
+    @Column(unique = true)
+    private double codeBank;
+    @NotBlank
+    @Column(length = 75)
+    private String nomBeneficiaire;
+    @Column()
+    private double solde;
+
+    public double getNumeroCompte() {
+        return numeroCompte;
+    }
+
+    public void setNumeroCompte(double numeroCompte) {
+        this.numeroCompte = numeroCompte;
+    }
+
+    public double getCodeBank() {
+        return codeBank;
+    }
+
+    public void setCodeBank(double codeBank) {
+        this.codeBank = codeBank;
+    }
+
+    public String getNomBeneficiaire() {
+        return nomBeneficiaire;
+    }
+
+    public void setNomBeneficiaire(String nomBeneficiaire) {
+        this.nomBeneficiaire = nomBeneficiaire;
+    }
+
+    public double getSolde() {
+        return solde;
+    }
+
+    public void setSolde(double solde) {
+        this.solde = solde;
+    }
+
 }
