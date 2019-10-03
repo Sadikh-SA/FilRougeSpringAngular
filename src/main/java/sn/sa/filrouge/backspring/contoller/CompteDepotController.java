@@ -64,11 +64,18 @@ public class CompteDepotController {
         User user = userDetailsService.getUserConnect();
         depot.setDateDepot(new Date());
         depot.setCaissier(user);
-        depot.setCompte(user.getCompte());
 
-        Compte compte = compteRepository.findCompteById(user.getCompte().getId()).orElseThrow(
+
+        Compte compte = compteRepository.findCompteByNumeroCompte(depot.getCompte().getNumeroCompte()).orElseThrow(
                 ()->new Exception("Ce compte n'existe pas ")
         );
+
+        if (compte == null){
+            System.out.println("Ce compte n'existe pas");
+            System.exit(0);
+        }
+
+        depot.setCompte(compte);
 
         compte.setSolde(compte.getSolde() + depot.getMontantDepot());
         compteRepository.save(compte);

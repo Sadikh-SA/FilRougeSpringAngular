@@ -27,11 +27,11 @@ public class User{
     private Long id;
 
     @NotBlank
-    @Size(min=3, max = 50)
+    @Size(min=1, max = 50)
     private String name;
 
     @NotBlank
-    @Size(min=3, max = 50)
+    @Size(min=1, max = 50)
     private String prenom;
 
     @NotBlank
@@ -42,22 +42,16 @@ public class User{
     @Size(min=7, max = 20)
     private String tel;
 
-    @NotBlank
-    @Size(min=3, max = 50)
     private boolean statut;
 
     @NotBlank
-    @Size(min=3, max = 50)
     private String profil;
 
-    @NotBlank
-    @Size(min=3, max = 50)
     private Date dateCreation;
 
-    @Size(min=3, max = 50)
+    @Size(min=1, max = 50)
     private String imageName;
 
-    @NotBlank
     @JoinColumn(name = "id_partenaire", referencedColumnName = "id")
     @ManyToOne(optional = false)
     private Partenaire partenaire;

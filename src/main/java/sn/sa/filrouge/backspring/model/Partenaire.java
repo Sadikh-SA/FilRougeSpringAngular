@@ -27,7 +27,7 @@ public class Partenaire {
     @Column()
     private boolean statut;
 
-    public Partenaire(@NotBlank String ninea, @NotBlank String localisation, @NotBlank String domaineActivite, @NotBlank Date dateCreation, @NotBlank boolean statut) {
+    public Partenaire(String ninea, String localisation, String domaineActivite, Date dateCreation, boolean statut) {
         this.ninea = ninea;
         this.localisation = localisation;
         this.domaineActivite = domaineActivite;

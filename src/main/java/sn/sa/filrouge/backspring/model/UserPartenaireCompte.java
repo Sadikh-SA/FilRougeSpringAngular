@@ -1,6 +1,8 @@
 package sn.sa.filrouge.backspring.model;
 
 import org.hibernate.annotations.NaturalId;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.password.PasswordEncoder;
 
 import javax.persistence.*;
 import javax.validation.constraints.Email;
@@ -11,77 +13,33 @@ import java.util.HashSet;
 import java.util.Set;
 
 public class UserPartenaireCompte {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
 
-    @NotBlank
-    @Size(min=3, max = 50)
     private String name;
-
-    @NotBlank
-    @Size(min=3, max = 50)
     private String prenom;
-
-    @NotBlank
-    @Size(min=3, max = 50)
     private String adresse;
-
-    @NotBlank
-    @Size(min=7, max = 20)
     private String tel;
-
-    @NotBlank
-    @Size(min=3, max = 50)
     private boolean statut;
-
-    @NotBlank
-    @Size(min=3, max = 50)
     private String profil;
-
-    @NotBlank
-    @Size(min=3, max = 50)
     private Date dateCreation;
-
-    @Size(min=3, max = 50)
     private String imageName;
-
-    @NotBlank
-    @JoinColumn(name = "id_partenaire", referencedColumnName = "id")
-    @ManyToOne(optional = false)
+    private String username;
+    private String email;
+    private String password;
+    private Set<Role> roles = new HashSet<>();
+    private String ninea;
+    private String localisation;
+    private String domaineActivite;
+    private double codeBank;
+    private String nomBeneficiaire;
     private Partenaire partenaire;
 
-    @JoinColumn(name = "id_compte", referencedColumnName = "id")
-    @ManyToOne(optional = false)
-    private Compte compte;
 
-    @NotBlank
-    @Size(min=3, max = 50)
-    private String username;
-
-    @NaturalId
-    @NotBlank
-    @Size(max = 50)
-    @Email
-    private String email;
-
-    @NotBlank
-    @Size(min=6, max = 100)
-    private String password;
-
-    @ManyToMany(fetch = FetchType.LAZY)
-    @JoinTable(name = "user_roles",
-            joinColumns = @JoinColumn(name = "user_id"),
-            inverseJoinColumns = @JoinColumn(name = "role_id"))
-    private Set<Role> roles = new HashSet<>();
-
-
-    public Long getId() {
-        return id;
+    public Partenaire getPartenaire() {
+        return partenaire;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public void setPartenaire(Partenaire partenaire) {
+        this.partenaire = partenaire;
     }
 
     public String getUsername() {
@@ -179,36 +137,10 @@ public class UserPartenaireCompte {
         this.imageName = imageName;
     }
 
-    public Partenaire getPartenaire() {
-        return partenaire;
-    }
-
-    public void setPartenaire(Partenaire partenaire) {
-        this.partenaire = partenaire;
-    }
-
-    public Compte getCompte() {
-        return compte;
-    }
-
-    public void setCompte(Compte compte) {
-        this.compte = compte;
-    }
-
 
     /**
      * Parti partenaire
      */
-
-    @NotBlank
-    @Column(length = 100, unique = true)
-    private String ninea;
-    @NotBlank
-    @Column(length = 75)
-    private String localisation;
-    @NotBlank
-    @Column(length = 75)
-    private String domaineActivite;
 
     public String getNinea() {
         return ninea;
@@ -238,23 +170,6 @@ public class UserPartenaireCompte {
      * Parti Compte
      */
 
-    @Column(unique = true)
-    private double numeroCompte;
-    @Column(unique = true)
-    private double codeBank;
-    @NotBlank
-    @Column(length = 75)
-    private String nomBeneficiaire;
-    @Column()
-    private double solde;
-
-    public double getNumeroCompte() {
-        return numeroCompte;
-    }
-
-    public void setNumeroCompte(double numeroCompte) {
-        this.numeroCompte = numeroCompte;
-    }
 
     public double getCodeBank() {
         return codeBank;
@@ -272,12 +187,5 @@ public class UserPartenaireCompte {
         this.nomBeneficiaire = nomBeneficiaire;
     }
 
-    public double getSolde() {
-        return solde;
-    }
-
-    public void setSolde(double solde) {
-        this.solde = solde;
-    }
 
 }

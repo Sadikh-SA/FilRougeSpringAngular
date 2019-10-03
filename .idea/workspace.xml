@@ -2,24 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="03f1441e-8419-4137-9399-e29bd67b85d8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/sn/sa/filrouge/backspring/contoller/CompteDepotController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/sn/sa/filrouge/backspring/contoller/PartenaireController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/sn/sa/filrouge/backspring/model/UserPartenaireCompte.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/sn/sa/filrouge/backspring/contoller/UserController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sn/sa/filrouge/backspring/contoller/ProfilCommisionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sn/sa/filrouge/backspring/contoller/ProfilCommisionController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sn/sa/filrouge/backspring/model/Compte.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sn/sa/filrouge/backspring/model/Compte.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sn/sa/filrouge/backspring/model/Depot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sn/sa/filrouge/backspring/model/Depot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sn/sa/filrouge/backspring/contoller/CompteDepotController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sn/sa/filrouge/backspring/contoller/CompteDepotController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/sn/sa/filrouge/backspring/model/Partenaire.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sn/sa/filrouge/backspring/model/Partenaire.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/sn/sa/filrouge/backspring/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sn/sa/filrouge/backspring/model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sn/sa/filrouge/backspring/repository/CompteRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sn/sa/filrouge/backspring/repository/CompteRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sn/sa/filrouge/backspring/services/UserDetailsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sn/sa/filrouge/backspring/services/UserDetailsServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sn/sa/filrouge/backspring/contoller/ProfilCommisionController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sn/sa/filrouge/backspring/contoller/ProfilCommisionController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sn/sa/filrouge/backspring/model/Compte.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sn/sa/filrouge/backspring/model/Compte.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sn/sa/filrouge/backspring/model/Depot.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sn/sa/filrouge/backspring/model/Depot.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sn/sa/filrouge/backspring/model/UserPartenaireCompte.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sn/sa/filrouge/backspring/model/UserPartenaireCompte.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/sn/sa/filrouge/backspring/contoller/CompteDepotController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sn/sa/filrouge/backspring/contoller/CompteDepotController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/sn/sa/filrouge/backspring/model/Partenaire.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sn/sa/filrouge/backspring/model/Partenaire.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/sn/sa/filrouge/backspring/model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sn/sa/filrouge/backspring/model/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sn/sa/filrouge/backspring/repository/CompteRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sn/sa/filrouge/backspring/repository/CompteRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sn/sa/filrouge/backspring/services/UserDetailsServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sn/sa/filrouge/backspring/services/UserDetailsServiceImpl.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -113,7 +104,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1569830397039</updated>
-      <workItem from="1569830401927" duration="34931000" />
+      <workItem from="1569830401927" duration="59885000" />
     </task>
     <servers />
   </component>
