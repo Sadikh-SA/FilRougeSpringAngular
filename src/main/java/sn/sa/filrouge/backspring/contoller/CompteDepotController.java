@@ -58,7 +58,7 @@ public class CompteDepotController {
         return depotRepository.findAll();
     }
 
-    @PostMapping(value = "/faire/depot", consumes = {MediaType.APPLICATION_JSON_VALUE})
+    @PostMapping(value = "/faire/depot")
     public Depot addDepot(@RequestBody Depot depot) throws Exception {
 
         User user = userDetailsService.getUserConnect();

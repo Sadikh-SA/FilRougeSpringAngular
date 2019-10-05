@@ -25,8 +25,9 @@ public class PartenaireController {
         return partenaireRepository.findAll();
     }
 
-    @PostMapping(value = "/ajouter/partenaire", consumes = {MediaType.APPLICATION_JSON_VALUE})
-    public Partenaire addPartenaire(@RequestBody Partenaire partenaire){
+    @PostMapping(value = "/ajouter/partenaire")
+    @PreAuthorize("hasAuthority('ROLE_Wari')")
+    public Partenaire addPartenaire(Partenaire partenaire){
 
         partenaire.setDateCreation(new Date());
         partenaire.setStatut(true);

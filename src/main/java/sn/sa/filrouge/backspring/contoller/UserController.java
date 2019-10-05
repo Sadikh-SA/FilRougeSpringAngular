@@ -2,6 +2,7 @@ package sn.sa.filrouge.backspring.contoller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 import sn.sa.filrouge.backspring.model.*;
@@ -33,8 +34,8 @@ public class UserController {
     UserDetailsServiceImpl userDetailsService;
 
 
-    @PostMapping(value = "/ajouter/partenaire/user", consumes = {MediaType.APPLICATION_JSON_VALUE})
-    public void addUserPartenaireCompte(@RequestBody UserPartenaireCompte userPartenaireCompte) throws Exception {
+    @PostMapping(value = "/ajouter/partenaire/user")
+    public void addUserPartenaireCompte(UserPartenaireCompte userPartenaireCompte) throws Exception {
 
 
         User user = new User();
@@ -127,4 +128,23 @@ public class UserController {
 
         userRepository.save(user);
     }
+
+    @PostMapping(value = "/attribuer/compte")
+    @PreAuthorize("hasAuthority({'ROLE_Admin_Parteniare','ROLE_Partenaire'})")
+    public User attribuerCompte(AttribuerCompte attribuerCompte) throws Exception{
+
+        User user = userRepository.findByUsername(attribuerCompte.getUsername()).orElseThrow();
+        Compte compte = compteRepository.findCompteByNumeroCompte(attribuerCompte.getCompte()).orElseThrow();
+
+        if (compte != null){
+            user.setCompte(compte);
+        }
+        else {
+            System.out.println("Ce compte n'existe pas");
+            System.exit(0);
+        }
+
+        return userRepository.save(user);
+    }
+
 }
