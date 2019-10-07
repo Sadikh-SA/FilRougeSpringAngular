@@ -2,25 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="03f1441e-8419-4137-9399-e29bd67b85d8" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/sn/sa/filrouge/backspring/model/FormCompte.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sn/sa/filrouge/backspring/config/JwtRequestFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sn/sa/filrouge/backspring/config/JwtRequestFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sn/sa/filrouge/backspring/config/JwtTokenUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sn/sa/filrouge/backspring/config/JwtTokenUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sn/sa/filrouge/backspring/config/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sn/sa/filrouge/backspring/config/WebSecurityConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/sn/sa/filrouge/backspring/contoller/CompteDepotController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sn/sa/filrouge/backspring/contoller/CompteDepotController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sn/sa/filrouge/backspring/contoller/JwtAuthenticationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sn/sa/filrouge/backspring/contoller/JwtAuthenticationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sn/sa/filrouge/backspring/contoller/PartenaireController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sn/sa/filrouge/backspring/contoller/PartenaireController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sn/sa/filrouge/backspring/contoller/ProfilCommisionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sn/sa/filrouge/backspring/contoller/ProfilCommisionController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/sn/sa/filrouge/backspring/contoller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sn/sa/filrouge/backspring/contoller/UserController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/sn/sa/filrouge/backspring/model/Compte.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sn/sa/filrouge/backspring/model/Compte.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/sn/sa/filrouge/backspring/repository/PartenaireRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sn/sa/filrouge/backspring/repository/PartenaireRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sn/sa/filrouge/backspring/config/JwtRequestFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sn/sa/filrouge/backspring/config/JwtRequestFilter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sn/sa/filrouge/backspring/config/JwtTokenUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sn/sa/filrouge/backspring/config/JwtTokenUtil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sn/sa/filrouge/backspring/config/WebSecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sn/sa/filrouge/backspring/config/WebSecurityConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/sn/sa/filrouge/backspring/repository/CompteRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/sn/sa/filrouge/backspring/repository/CompteRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/sn/sa/filrouge/backspring/contoller/CompteDepotController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sn/sa/filrouge/backspring/contoller/CompteDepotController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sn/sa/filrouge/backspring/contoller/JwtAuthenticationController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sn/sa/filrouge/backspring/contoller/JwtAuthenticationController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sn/sa/filrouge/backspring/contoller/PartenaireController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sn/sa/filrouge/backspring/contoller/PartenaireController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/sn/sa/filrouge/backspring/contoller/ProfilCommisionController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sn/sa/filrouge/backspring/contoller/ProfilCommisionController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/sn/sa/filrouge/backspring/contoller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sn/sa/filrouge/backspring/contoller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/sn/sa/filrouge/backspring/model/Compte.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sn/sa/filrouge/backspring/model/Compte.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/sn/sa/filrouge/backspring/repository/CompteRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/sn/sa/filrouge/backspring/repository/CompteRepository.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -118,7 +109,8 @@
       <workItem from="1569830401927" duration="63192000" />
       <workItem from="1570178645982" duration="4947000" />
       <workItem from="1570259079194" duration="4402000" />
-      <workItem from="1570368794703" duration="9348000" />
+      <workItem from="1570368794703" duration="18864000" />
+      <workItem from="1570446945519" duration="1401000" />
     </task>
     <servers />
   </component>

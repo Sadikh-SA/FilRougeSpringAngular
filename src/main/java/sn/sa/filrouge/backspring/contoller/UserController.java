@@ -132,9 +132,9 @@ public class UserController {
         return userRepository.findAll();
     }
 
-    @PostMapping(value = "/attribuer/compte")
-    @PreAuthorize("hasAuthority({'ROLE_Admin_Parteniare','ROLE_Partenaire'})")
-    public User attribuerCompte(AttribuerCompte attribuerCompte) throws Exception{
+    @PostMapping(value = "/attribuer/compte", consumes = { MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_FORM_URLENCODED_VALUE })
+    @PreAuthorize("hasAuthority('ROLE_Partenaire')")
+    public User attribuerCompte(@RequestBody AttribuerCompte attribuerCompte) throws Exception{
 
         User user = userRepository.findByUsername(attribuerCompte.getUsername()).orElseThrow();
         Compte compte = compteRepository.findCompteByNumeroCompte(attribuerCompte.getCompte()).orElseThrow();
