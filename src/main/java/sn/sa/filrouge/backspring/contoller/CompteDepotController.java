@@ -28,7 +28,7 @@ public class CompteDepotController {
     @Autowired
     private CompteRepository compteRepository;
 
-    @GetMapping(value = "/liste/compte")
+    @GetMapping(value = "/lister/compte")
     @PreAuthorize("hasAuthority('ROLE_Wari')")
     public List<Compte> listerCompte(){
         return compteRepository.findAll();
@@ -42,7 +42,8 @@ public class CompteDepotController {
         compte.setNumeroCompte(nbre);
         compte.setDateCreation(new Date());
         compte.setSolde(0);
-        compte.setPartenaire(compte.getPartenaire());
+        Partenaire part = partenaireRepository.findPartenaireByNinea(compte.getNinea()).orElseThrow();
+        compte.setPartenaire(part);
         return compteRepository.save(compte);
     }
 
@@ -52,7 +53,7 @@ public class CompteDepotController {
     @Autowired
     UserDetailsServiceImpl userDetailsService;
 
-    @GetMapping(value = "/liste/depot")
+    @GetMapping(value = "/lister/depot")
     @PreAuthorize("hasAuthority('ROLE_Wari')")
     public List<Depot> listerDepots(){
         return depotRepository.findAll();

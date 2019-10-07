@@ -21,7 +21,7 @@ public class ProfilCommisionController {
     @Autowired
     private CommissionRepository commissionRepository;
 
-    @GetMapping(value = "/liste/profil")
+    @GetMapping(value = "/lister/profil")
     @PreAuthorize("hasAuthority('ROLE_Wari')")
     public List<Profil> listerService(){
         return profilRepository.findAll();

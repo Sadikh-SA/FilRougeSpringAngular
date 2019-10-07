@@ -21,6 +21,16 @@ public class Compte {
     @NotBlank
     @Column(length = 75)
     private String nomBeneficiaire;
+    private String ninea;
+
+    public String getNinea() {
+        return ninea;
+    }
+
+    public void setNinea(String ninea) {
+        this.ninea = ninea;
+    }
+
     @Column()
     private double solde;
     @Column()

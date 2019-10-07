@@ -9,10 +9,7 @@ import sn.sa.filrouge.backspring.model.*;
 import sn.sa.filrouge.backspring.repository.*;
 import sn.sa.filrouge.backspring.services.UserDetailsServiceImpl;
 
-import java.util.Date;
-import java.util.HashSet;
-import java.util.Optional;
-import java.util.Set;
+import java.util.*;
 
 @RestController
 @CrossOrigin
@@ -127,6 +124,12 @@ public class UserController {
         }
 
         userRepository.save(user);
+    }
+
+    @GetMapping(value = "/lister/user")
+    @PreAuthorize("hasAuthority('ROLE_Wari')")
+    public List<User> listerUsers(){
+        return userRepository.findAll();
     }
 
     @PostMapping(value = "/attribuer/compte")

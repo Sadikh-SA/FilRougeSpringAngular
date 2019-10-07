@@ -9,5 +9,5 @@ import java.util.Optional;
 
 @Repository
 public interface PartenaireRepository extends JpaRepository<Partenaire, Integer> {
-
+    Optional<Partenaire> findPartenaireByNinea(String ninea);
 }

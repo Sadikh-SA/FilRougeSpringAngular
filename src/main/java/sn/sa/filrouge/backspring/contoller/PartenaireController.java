@@ -19,7 +19,7 @@ public class PartenaireController {
     @Autowired
     private PartenaireRepository partenaireRepository;
 
-    @GetMapping(value = "/liste/partenaire")
+    @GetMapping(value = "/lister/partenaire")
     @PreAuthorize("hasAuthority('ROLE_Wari')")
     public List<Partenaire> listerPartenaire(){
         return partenaireRepository.findAll();
